@@ -4,5 +4,7 @@ import { eventHandler } from "h3"
 export default eventHandler((event) => {
   const config = useRuntimeConfig(event)
   return `<p>commit: ${config.commit}</p>
-  <p>test: ${config.test}</p>`;
+  <p>test: ${config.test}</p>
+  <p>test: update</p>
+  `;
 });
