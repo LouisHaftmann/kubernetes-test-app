@@ -7,7 +7,7 @@ on:
 
 env:
   APP_NAME: test-a
-  IMAGE_NAME: ghcr.io/${{ github.repository }}
+  IMAGE_NAME: ghcr.io/louishaftmann/kubernetes-test-app
 
 jobs:
   build-and-push:
@@ -50,7 +50,7 @@ jobs:
         run: |
           cd config-repo/overlays/${{ env.APP_NAME }}
 
-          kustomize edit set image ${{ env.APP_NAME }}=ghcr.io/${{ github.repository }}:${{ github.sha }}
+          kustomize edit set image ${{ env.APP_NAME }}=${{ env.IMAGE_NAME }}:${{ github.sha }}
 
           # Commit and Push changes
           git config user.name "GitHub Actions"
