@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  APP_NAME: test-a
+  APP_NAME: test-a-prod
   IMAGE_NAME: ghcr.io/louishaftmann/kubernetes-test-app
 
 jobs:
