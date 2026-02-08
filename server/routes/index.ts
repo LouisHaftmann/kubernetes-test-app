@@ -5,6 +5,6 @@ export default eventHandler((event) => {
   const config = useRuntimeConfig(event)
   return `<p>commit: ${config.commit}</p>
   <p>test: ${config.test}</p>
-  <p>test: hey</p>
+  <p>test: cool</p>
   `;
 });
