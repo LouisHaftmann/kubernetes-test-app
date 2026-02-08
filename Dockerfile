@@ -3,7 +3,6 @@ FROM node:24-alpine as builder
 WORKDIR /app
 
 ENV CI=true
-ARG COMMIT
 
 COPY . .
 
@@ -16,7 +15,7 @@ RUN pnpm build
 FROM node:24-alpine
 
 ARG COMMIT
-ENV COMMIT=${COMMIT}
+ENV NITRO_COMMIT=${COMMIT}
 
 WORKDIR /app
 
